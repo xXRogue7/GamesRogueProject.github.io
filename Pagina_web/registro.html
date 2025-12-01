@@ -1,18 +1,136 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <meta charset="UTF-8">
+        <title>Formulario de alta de usuario</title>
+        <style>
+            td {
+                border: 1px solid black;
+                padding: 8px;
+                vertical-align: top;
+            }
+            input[type="text"],
+           input[type="password"],
+           input[type="email"],
+            select,
+            textarea {
+                width: 95%;
+                padding: 4px;
+                box-sizing: border-box;
+            }
+            textarea {
+            height: 80px;
+            }
+            .titulo {
+                text-align: left;
+                font-weight: bold;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            .identificador {
+                text-align: center;
+                font-weight: bold;
+                background: white;
+            }
+            .botones {
+            text-align: center;
+            padding: 10px;
+            border: none;
+        }
+        </style>
     </head>
+    <body style="font-family: arial;">
+        <div class="titulo">Formulario de alta de usuario</div>
+            <table style="width: 700px; margin: 0 auto; border-collapse: collapse";>
+                <tr>
+                    <td colspan="2" class="identificador">Identificador de nuevo usuario | usu_012345</td>
+                </tr>
+<!--Nombre-->
+                <tr>
+                    <td>Nombre<br><input type="text" name="nombre"></td>
+                    <td>Apellido<br><input type="text" name="apellido"></td>
+                </tr>
+<!--Password-->
+                <tr>
+                    <td>Contraseña<br><input type="password" name="pass"></td>
+                    <td>Confirmar contraseña<br><input type="password" name="pass2"></td>
+                </tr>
+<!--Email-->
+                <tr>
+                    <td colspan="2">Email<input type="email" name="email"></td>
+                </tr>
+<!--Sexo-->
+                <tr>
+                    <td>Sexo</td>
+                    <td>
+                        <input type="radio" name="sexo" value="varon"> Varón
+                        <input type="radio" name="sexo" value="mujer" checked> Mujer
+                    </td>
+                </tr>
+<!--Aficiones-->
+                 <tr>
+                    <td>Aficiones</td>
+                    <td>
+                        <input type="checkbox" name="deporte"> Deporte<br>
+                        <input type="checkbox" name="lectura" checked> Lectura<br>
+                        <input type="checkbox" name="cine"> Cine
+                    </td>
+                </tr>
+<!--País-->
+                <tr>
+                    <td>País</td>
+                    <td>
+                        <select name="pais">
+                            <option selected>Francia</option>
+                            <option>España</option>
+                            <option>Alemania</option>
+                            <option>Italia</option>
+                        </select>
+                    </td>
+                </tr>
+<!--Colores Favoritos-->
+                <tr>
+                    <td>Colores Favoritos</td>
+                    <td>
+                        <select name="aficiones" size="3" multiple="multiple">
+                            <option value="Rojo" selected>Rojo</option>
+                            <option value="Verde">Verde</option>
+                            <option value="Azul" selected>Azul</option>
+                        </select>
+                    </td>
+                </tr>
 
-<body>
-    <form name="registro">
-            CORREO: <input type="text" name="Usuario 01" value="correo"  ></br>
-            CONTRASEÑA: <input type="password" name="pass"></br>
-            SOCIO: <input type="checkbox" name="socio" checked="true"></br>
-            SEXO: <input type="radio" name="sexo">Masculino
-                <input type="radio" name="sexo">Femenino
-                <input type="radio" name="sexo">Otro
-        </br>
-</body>
-
+<!--Subir foto-->
+                <tr>
+                    <tr>
+                    <td>Subir su foto</td>
+                    <td colspan="2">
+                        <input type="file" name="foto">
+                    </td>
+                </tr>
+<!-- Comentarios personales -->
+                <tr>
+                    <td>Comentarios personales</td>
+                    <td colspan="2">
+                        <textarea name="Comentario" rows="5" cols="40" placeholder="Escriba aquí sus comentarios"></textarea>
+                    </td>
+                </tr>
+<!-- Resetear y Enviar -->
+                <tr class="botonera">
+                    <td>
+                        <button type="reset">Resetear</button>
+                    </td>
+                    <td>
+                        <button type="submit">Enviar</button>
+                    </td>
+                </tr>
+<!-- Modificar datos del usuario -->
+                <tr>
+                    <td colspan="3" class="boton-grande">
+                        <button type="button" disabled>Modificar datos usuario</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
 </html>
