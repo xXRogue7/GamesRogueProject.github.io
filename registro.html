@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario de alta de usuario</title>
+        <style>
+            td {
+                border: 1px solid black;
+                padding: 8px;
+                vertical-align: top;
+            }
+            input[type="text"],
+           input[type="password"],
+           input[type="email"],
+            select,
+            textarea {
+                width: 95%;
+                padding: 4px;
+                box-sizing: border-box;
+            }
+            textarea {
+            height: 80px;
+            }
+            .titulo {
+                text-align: left;
+                font-weight: bold;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            .identificador {
+                text-align: center;
+                font-weight: bold;
+                background: white;
+            }
+            .botones {
+            text-align: center;
+            padding: 10px;
+            border: none;
+        }
+        </style>
+    </head>
+    <body style="font-family: arial;">
+        <div> 
+            <table style="width: 700px; margin: 0 auto; border-collapse: collapse";>
+                <tr>
+                    <td colspan="2" class="registro">REGISTRO</td>
+                </tr>
+
+                <tr>
+                    <td>Nombre<br><input type="text" name="nombre"></td>
+                    <td>Apellido<br><input type="text" name="apellido"></td>
+                </tr>
+
+                <tr>
+                    <td>Contraseña<br><input type="password" name="pass"></td>
+                    <td>Confirmar contraseña<br><input type="password" name="pass2"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">Email<input type="email" name="email"></td>
+                </tr>
+
+                <tr>
+                    <td>Género</td>
+                    <td>
+                        <input type="radio" name="genero" value="hombre"> Hombre
+                        <input type="radio" name="genero" value="mujer" > Mujer
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <tr>
+                    <td>Subir foto de usuario</td>
+                    <td colspan="2">
+                        <input type="file" name="foto">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Comentarios personales</td>
+                    <td colspan="2">
+                        <textarea name="Comentario" rows="5" cols="40" placeholder="Escriba aquí sus comentarios"></textarea>
+                    </td>
+                </tr>
+
+                <tr class="botonera">
+                    <td colspan="2" >
+                        <button type="submit">Enviar</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
