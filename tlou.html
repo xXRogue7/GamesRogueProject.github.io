@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Last of Us</title>
+  <style>
+    :root {
+      --col-left-width: 28%;
+      --col-right-width: 72%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: #fff;
+      color: #111;
+    }
+
+    .header {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .banner {
+      background-image: url('banner-tlou.jpg'); /* Reemplaza con tu imagen */
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      margin-bottom: 32px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      background: #ddd;
+      border-bottom: 1px solid #ccc;
+      width: 100%;
+      margin-bottom: 32px;
+    }
+
+    .menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .menu ul li {
+      position: relative;
+    }
+
+    .menu > ul > li > a,
+    .menu > ul > li {
+      display: block;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #000;
+      background: #eee;
+      border-right: 1px solid #ccc;
+      font-weight: bold;
+    }
+
+    .menu > ul > li:last-child {
+      border-right: none;
+    }
+
+    .menu > ul > li:hover {
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .menu ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background: #f6f6f6;
+      border: 1px solid #ccc;
+      width: 200px;
+      z-index: 10;
+    }
+
+    .menu ul li:hover ul {
+      display: block;
+    }
+
+    .menu ul li ul li {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .menu ul li ul li a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #000;
+      background: #fff;
+    }
+
+    .menu ul li ul li a:hover {
+      background: #888;
+      color: #fff;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 0;
+    }
+
+    td {
+      border: none;
+      vertical-align: top;
+      padding: 0;
+    }
+
+    .col-left {
+      width: var(--col-left-width);
+    }
+    .col-right {
+      width: var(--col-right-width);
+      padding-left: 24px;
+    }
+
+    .cover {
+      display: block;
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      background: #f5f5f5;
+    }
+
+    .desc {
+      display: grid;
+      gap: 6px;
+      line-height: 1.45;
+    }
+    .title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0;
+    }
+    .meta {
+      color: #444;
+    }
+    .price {
+      font-weight: 700;
+    }
+
+    .divider td {
+      padding: 16px 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    @media (max-width: 640px) {
+      table, tbody, tr, td {
+        display: block;
+        width: 100%;
+      }
+      .col-right {
+        padding-left: 0;
+        margin-top: 12px;
+      }
+      .cover {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="banner">
+      The Last of Us
+    </div>
+
+    <nav class="menu">
+     <ul>
+    <li><a href="index.html">INICIO</a></li>
+    <li><a href="registro.html">REGISTRO</a></li>
+    <li>SAGAS
+      <ul>
+        <li><a href="assassinscreed.html">ASSASSIN'S CREED</a></li>
+        <li><a href="tombraider.html">TOMB RAIDER</a></li>
+        <li><a href="#">THE LAST OF US</a></li>
+        <li><a href="batman.html">BATMAN</a></li>
+      </ul>
+    </li>
+  </ul>
+    </nav>
+
+    <table aria-label="Tabla de juegos The Last of Us">
+      <tbody>
+        <tr>
+          <td class="col-left">
+            <img class="cover" src="tlou1.png" alt="Portada The Last of Us" />
+          </td>
+          <td class="col-right">
+            <div class="desc">
+              <h3 class="title">THE LAST OF US (2013)</h3>
+              <div><span class="price">Sinopsis:</span> The Last of Us (2013) es un juego de acción y aventura en un mundo post-apocalíptico, desarrollado por Naughty Dog. La historia sigue a Joel, un hombre endurecido por la vida en un mundo devastado por una infección fúngica que convierte a los humanos en criaturas monstruosas llamadas infectados. Junto a él va Ellie, una adolescente aparentemente inmune al hongo, y la clave para encontrar una posible cura para la humanidad.
+
+A lo largo del juego, Joel y Ellie atraviesan un Estados Unidos destruido, enfrentándose a los infectados y a otros sobrevivientes hostiles. Lo que comienza como una misión para entregar a Ellie a un grupo de resistencia se convierte en un viaje emocional lleno de sacrificios, lealtades y desafíos personales. Mientras Joel lucha por proteger a Ellie, ambos forman una profunda conexión que va más allá de la simple supervivencia.</div>
+              <div class="meta"><strong>Plataformas:</strong> PlayStation 3, PlayStation 4</div>
+            </div>
+          </td>
+        </tr>
+        <tr class="divider"><td colspan="2"></td></tr>
+
+        <tr>
+          <td class="col-left">
+            <img class="cover" src="tlou2.png" alt="Portada The Last of Us Parte II" />
+          </td>
+          <td class="col-right">
+            <div class="desc">
+              <h3 class="title">THE LAST OF US PARTE II (2020)</h3>
+              <div><span class="price">Sinopsis:</span> The Last of Us Parte II (2020) continúa la historia de Ellie, quien ahora es una joven adulta viviendo en una comunidad relativamente segura en Jackson, Wyoming, después de los eventos de la primera entrega. La paz, sin embargo, se ve interrumpida cuando un trágico suceso cambia la vida de Ellie para siempre, motivándola a embarcarse en una peligrosa misión de venganza.
+
+A lo largo del juego, Ellie se enfrenta a dilemas morales, mientras busca justicia a su manera, cruzándose con grupos enemigos como los WLF (Washington Liberation Front) y los Serafitas. El viaje emocional de Ellie la lleva a enfrentarse a las consecuencias de sus decisiones, la violencia y el costo humano de la venganza.
+
+La historia también presenta la perspectiva de Abby, una nueva protagonista cuya historia se entrelaza con la de Ellie, revelando los eventos que conectan a ambas de manera sorprendente. A lo largo del juego, se exploran temas de odio, redención, culpa y el ciclo de la violencia, ofreciendo una narrativa profunda y emocionalmente compleja.</div>
+              <div class="meta"><strong>Plataformas:</strong> PlayStation 4, PlayStation 5</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
