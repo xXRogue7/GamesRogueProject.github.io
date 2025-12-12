@@ -1,24 +1,13 @@
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
-  <head>
-   <title>GamesRogueProject</title>
-   <meta charset="UTF-8" />
-   <meta name="author" content="Marcos" />
-   <meta name="description" content="videogame page" />
-   <meta http-equiv="content-type" content="text/html" />
-   <meta http-equiv="content-language" content="es-es" />
-   <meta name="keywords" content="videojuegos videogames juegos games" />
-   <meta scheme="Europe" content="11-10-2025" />
-   <meta name="copyright" content="GamesRogue" />
-   <meta name="generator" content="visual studio" />
-   <meta name="date" content="1 Oct de 2025" />
-   <meta name="locality" content="Madrid, España" />
-   <meta name="revisit-after" content="1 day" />
-   <meta http-equiv="cache-control" content="max-age=3600" />
-   <meta http-equiv="cache-control" content="private" />
-   <link rel="stylesheet" href="desplegable.css">
-   <link rel="shortcut icon" type="image/x-icon" href="logo.ico"> 
-     <style>
+<html>
+<head>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: turquoise;
+    }
+
     .banner {
       margin: 0;
       background-color: #0a0b10;
@@ -28,16 +17,97 @@
       max-width: 100%;
       height: 250px;
     }
+
     h1 {
       text-align: center;
       color: #333;
     }
+
+    /* Menú principal */
+    .menu {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      background: #ddd;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .menu ul li {
+      position: relative;
+    }
+
+    .menu > ul > li > a,
+    .menu > ul > li {
+      display: block;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #000;
+      background: #eee;
+      border-right: 1px solid #ccc;
+      font-weight: bold;
+    }
+
+    .menu > ul > li:last-child {
+      border-right: none;
+    }
+
+    .menu > ul > li:hover {
+      background: #fff;
+      cursor: pointer;
+    }
+
+    /* Submenú */
+    .menu ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background: #f6f6f6;
+      border: 1px solid #ccc;
+      width: 200px;
+      z-index: 10;
+    }
+
+    .menu ul li:hover ul {
+      display: block;
+    }
+
+    .menu ul li ul li {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .menu ul li ul li a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #000;
+      background: #fff;
+    }
+
+    .menu ul li ul li a:hover {
+      background: #888;
+      color: #fff;
+    }
+
+    /* Contenedor de juegos */
     .game-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
+      padding: 20px;
     }
+
     .game-card {
       background-color: #fff;
       border: 1px solid #ddd;
@@ -46,71 +116,54 @@
       padding: 15px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+
     .game-title {
       font-size: 1.2em;
       margin-bottom: 10px;
       color: #0077cc;
     }
+
     .platforms, .price, .points, .gift {
       margin-bottom: 8px;
     }
+
     .gift {
       color: green;
       font-weight: bold;
     }
-  </style>
-    
-  </head>
+</style>
+</head>
 
+<body>
+  <header>
+    <img src="banner.png" alt="banner" class="banner">
+  </header>
 
-   <!-- Aqui empieza el cuerpo -->
-   <body style="background-color: turquoise;">
-     <header>
-       <img src="banner.png" alt="banner" class="banner">
-     </header>
-      <nav class="menu">
+  <!-- Menú desplegable -->
+  <nav class="menu">
+    <ul>
+      <li><a href="#">INICIO</a></li>
+      <li><a href="registro.html">REGISTRO</a></li>
+      <li>SAGAS
         <ul>
-          <li><a href="#">INICIO</a></li>
-          <li>
-            <a href="registro.html">REGISTRO</a>
-          </li>
-          <li>SAGAS
-            <ul>
-              <li>ASSASSIN'S CREED</li>
-              <li>BATMAN ARKHAM</li>
-            </ul>
-          </li>
+          <li><a href="assassinscreed.html">ASSASSINS</a></li>
+          <li><a href="#">TOMB RAIDER</a></li>
+          <li><a href="#">THE LAST OF US</a></li>
+          <li><a href="#">BATMAN</a></li>
         </ul>
-      </nav>
+      </li>
+    </ul>
+  </nav>
 
-     <div class="game-container">
+  <!-- Contenedor de juegos -->
+  <div class="game-container">
     <div class="game-card">
-      
-      <div>
-        <img src="assassinscreed.png" type="image/png">
-    </div>
-      <div class="gift">ASSASSINS CREED</div>
-    </div>
-       
-    <div class="game-card">
-      <div> <img src="batmanlogo.png" type="image/png"></div>
-      <div class="game-title">BATMAN</div>
-    </div>
-       
-    <div class="game-card">
-      <div><img src="tloulogo.png" type="image/png"></div>
-      <div class="game-title">THE LAST OF US</div>
+      <div class="game-title">Ejemplo Juego</div>
+      <div class="platforms">Plataformas: PC, PS5</div>
+      <div class="price">Precio: 59.99€</div>
+      <div class="points">Puntos: 8/10</div>
+      <div class="gift">Incluye contenido extra</div>
     </div>
   </div>
-
-     <div id="footer">
-      <a href="https://xxrogue7.github.io/GamesRogue.github.io/">GamesRogue</a> © 2025 by <a href="https://creativecommons.org">M</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
-     </div>
-   </body>
-
+</body>
 </html>
-
-
-
-
-
