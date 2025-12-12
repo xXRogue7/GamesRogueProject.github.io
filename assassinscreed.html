@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Assassins Creed</title>
+  <style>
+   :root {
+      --col-left-width: 28%;
+      --col-right-width: 72%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: #fff;
+      color: #111;
+    }
+
+    /* Contenedor central */
+    .header {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Banner superior */
+    .banner {
+      background-image: url('banner-assassins-creed.jpg'); /* Reemplaza con tu imagen */
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      margin-bottom: 32px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* Menú principal */
+    .menu {
+      display: flex;
+      justify-content: center;
+      background: #ddd;
+      border-bottom: 1px solid #ccc;
+      width: 100%;
+      margin-bottom: 32px;
+    }
+
+    .menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .menu ul li {
+      position: relative;
+    }
+
+    .menu > ul > li > a,
+    .menu > ul > li {
+      display: block;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #000;
+      background: #eee;
+      border-right: 1px solid #ccc;
+      font-weight: bold;
+    }
+
+    .menu > ul > li:last-child {
+      border-right: none;
+    }
+
+    .menu > ul > li:hover {
+      background: #fff;
+      cursor: pointer;
+    }
+
+    /* Submenú SAGAS */
+    .menu ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background: #f6f6f6;
+      border: 1px solid #ccc;
+      width: 200px;
+      z-index: 10;
+    }
+
+    .menu ul li:hover ul {
+      display: block;
+    }
+
+    .menu ul li ul li {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .menu ul li ul li a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #000;
+      background: #fff;
+    }
+
+    .menu ul li ul li a:hover {
+      background: #888;
+      color: #fff;
+    }
+
+    /* Tabla con bordes ocultos */
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 0;
+    }
+
+    td {
+      border: none;
+      vertical-align: top;
+      padding: 0;
+    }
+
+    /* Columnas */
+    .col-left {
+      width: var(--col-left-width);
+    }
+    .col-right {
+      width: var(--col-right-width);
+      padding-left: 24px;
+    }
+
+    /* Imagen de portada */
+    .cover {
+      display: block;
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      background: #f5f5f5;
+    }
+
+    /* Descripción */
+    .desc {
+      display: grid;
+      gap: 6px;
+      line-height: 1.45;
+    }
+    .title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0;
+    }
+    .meta {
+      color: #444;
+    }
+    .price {
+      font-weight: 700;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #0b7a0b;
+      background: #e9f7e9;
+      border: 1px solid #b9e5b9;
+      border-radius: 6px;
+      padding: 4px 8px;
+      margin-top: 4px;
+    }
+
+    /* Línea divisoria entre juegos */
+    .divider td {
+      padding: 16px 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      table, tbody, tr, td {
+        display: block;
+        width: 100%;
+      }
+      .col-right {
+        padding-left: 0;
+        margin-top: 12px;
+      }
+      .cover {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="banner">
+      <img src="assassinsbanner.png">
+    </div>
+
+     <nav class="menu">
+  <ul>
+    <li><a href="index.html">INICIO</a></li>
+    <li><a href="registro.html">REGISTRO</a></li>
+    <li>SAGAS
+      <ul>
+        <li><a href="#">ASSASSINS</a></li>
+        <li><a href="tombraider.html">TOMB RAIDER</a></li>
+        <li><a href="#">THE LAST OF US</a></li>
+        <li><a href="#">BATMAN</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    <table aria-label="Tabla de juegos con imágenes y descripciones">
+      <tbody>
+        <!-- Juego 1 -->
+        <tr>
+          <td class="col-left">
+            <img class="cover" src="assassinscreed.png" alt="Portada Assassin's Creed" />
+          </td>
+          <td class="col-right">
+            <div class="desc">
+              <h3 class="title">ASSASSIN'S CREED</h3>
+              <div><span class="price">Sinopsis:</span> Assassin's Creed (2007) es un videojuego de acción y aventura desarrollado por Ubisoft. La historia tiene lugar en el año 1191 d.C., durante la Tercera Cruzada en Tierra Santa. El jugador asume el papel de Altaïr Ibn-La'Ahad, un asesino miembro de una antigua orden secreta que lucha por mantener el equilibrio entre los templarios, quienes buscan el control del "Fruto del Edén", un artefacto de poder extraordinario.
+
+Altaïr es un joven y arrogante asesino que, tras fallar una misión importante y desobedecer órdenes directas, es despojado de su rango y obligado a realizar una serie de misiones para redimirse. A lo largo del juego, el protagonista debe eliminar a varios líderes templarios, cada uno responsable de mantener el conflicto de la Cruzada y buscar el poder de los artefactos secretos.</div>
+              <div class="meta"><strong>Plataformas:</strong> PlayStation 3, Xbox 360, PC</div>
+            </div>
+          </td>
+        </tr>
+        <tr class="divider"><td colspan="2"></td></tr>
+
+        <!-- Juego 2 -->
+        <tr>
+          <td class="col-left">
+            <img class="cover" src="assassinscreedezio.png" alt="Portada Ezio Collection" />
+          </td>
+          <td class="col-right">
+            <div class="desc">
+              <h3 class="title">ASSASSIN'S CREED EZIO COLLECTION</h3>
+              <div><span class="price">Sinopsis:</span> La Ezio Trilogy es una colección de tres juegos de Assassin's Creed que siguen la historia de Ezio Auditore da Firenze, un joven noble italiano que se convierte en asesino tras la muerte de su familia a manos de los templarios.<br>
+
+<strong>Assassin's Creed II (2009):</strong> Ezio inicia su camino de venganza contra los responsables de la muerte de su padre y hermanos, mientras descubre los secretos de los Asesinos y se enfrenta a poderosos enemigos en ciudades como Florencia, Venecia y Roma.<br>
+
+<strong>Assassin's Creed: Brotherhood (2010):</strong> Ezio, ahora líder de los Asesinos, lucha por liberar Roma del control de los templarios. Enfrentará conspiraciones, mientras recluta nuevos miembros para su causa y fortalece la hermandad.<br>
+
+<strong>Assassin's Creed: Revelations (2011):</strong> En su último viaje, Ezio viaja a Constantinopla en busca de los secretos del legendario Altair, mientras se enfrenta a la amenaza final de los templarios.<br>
+
+La trilogía de Ezio es considerada una de las más icónicas en la saga, destacándose por su rica narrativa, evolución del personaje y el mundo abierto interactivo.</div>
+              <div class="meta"><strong>Plataformas:</strong> Playstation 3, PlayStation 4, Xbox 360, Xbox One, Xbox Series, PC, Nintendo Switch</div>
+            </div>
+          </td>
+        </tr>
+        <tr class="divider"><td colspan="2"></td></tr>
+
+        <!-- Juego 3 -->
+        <tr>
+          <td class="col-left">
+            <img class="cover" src="assassinscreed3.png" alt="Portada Assassin's Creed III" />
+          </td>
+          <td class="col-right">
+            <div class="desc">
+              <h3 class="title">ASSASSIN'S CREED III</h3>
+              <div><span class="price">Sinopsis:</span> Assassin's Creed III (2012) sigue la historia de Connor Kenway, un joven mitad indígena americano y mitad británico, durante la Revolución Americana. Tras perder a su madre en un ataque templario, Connor se une a la Hermandad de los Asesinos para luchar contra los templarios y defender su pueblo y su libertad.
+
+El juego narra su viaje desde su infancia hasta convertirse en un hábil asesino, enfrentándose a figuras históricas como George Washington, Benjamin Franklin y Charles Lee. A lo largo de la historia, Connor lucha por la independencia de las colonias, mientras descubre oscuros secretos relacionados con los templarios y el poder de los artefactos antiguos.</div>
+              <div class="meta"><strong>Plataformas:</strong> PlayStation 3, PlayStation 4, Xbox 360, Xbox One , PC, Wii U, Mac OS X, Nintendo Switch</div>
+            </div>
+          </td>
+        </tr>
+        <tr class="divider"><td colspan="2"></td></tr>
+
+        <!-- Juego 4 -->
+        <tr>
+          <td class="col-left">
+            <img class="cover" src="assassinscreed4.png" alt="Portada Black Flag" />
+          </td>
+          <td class="col-right">
+            <div class="desc">
+              <h3 class="title">ASSASSIN'S CREED IV: BLACK FLAG</h3>
+              <div><span class="price">Sinopsis:</span> Assassin's Creed IV: Black Flag (2013) sigue la historia de Edward Kenway, un pirata y antepasado de Connor Kenway (de Assassin's Creed III). Ambientado en el siglo XVIII durante la Edad de Oro de la Piratería, Edward se ve envuelto en una lucha entre los Asesinos y los Templarios, después de ser engañado y convertirse accidentalmente en un miembro de la Hermandad de los Asesinos.
+
+A lo largo del juego, Edward busca riquezas y poder mientras navega por el Caribe a bordo de su propio barco, el Jackdaw. A medida que avanza en su viaje, se enfrenta a figuras históricas como Barbanegra y lucha por la libertad en un mundo lleno de traiciones, alianzas y secretos. La historia también explora el conflicto entre los Asesinos y los Templarios, y cómo ambos grupos luchan por controlar artefactos de gran poder.</div>
+              <div class="meta"><strong>Plataformas:</strong> PlayStation 3, PlayStation 4, Xbox 360, Xbox One , PC, Wii U, Mac OS X, Nintendo Switch, Linux</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
